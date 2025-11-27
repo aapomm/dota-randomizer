@@ -1,0 +1,271 @@
+---
+############################################################################
+# Color Theme
+############################################################################
+"Green Team":
+  - furion
+  - death_prophet
+  - earth_spirit
+  - enchantress
+  - furion
+  - hoodwink
+  - lone_druid
+  - medusa
+  - muerta
+  - necrolyte
+  - pugna
+  - rubick
+  - tidehunter
+  - abyssal_underlord
+  - venomancer
+  - viper
+  - windrunner
+
+"Blue Team":
+  - abaddon
+  - ancient_apparition
+  - arc_warden
+  - disruptor
+  - kez
+  - leshrac
+  - luna
+  - meepo
+  - morphling
+  - night_stalker
+  - ogre_magi
+  - puck
+  - razor
+  - riki
+  - storm_spirit
+  - vengefulspirit
+  - visage
+  - wisp
+  - zuus
+
+"Red Team":
+  - axe
+  - bloodseeker
+  - chaos_knight
+  - doom_bringer
+  - dragon_knight
+  - ember_spirit
+  - grimstroke
+  - lina
+  - mars
+  - phoenix
+  - shadow_demon
+  - nevermore
+  - troll_warlord
+  - warlock
+
+
+
+############################################################################
+# Legit Strategy
+############################################################################
+"Armor Reduction":
+  - alchemist
+  - bristleback
+  - dragon_knight
+  - pangolier
+  - nevermore
+  - snapfire
+  - templar_assassin
+  - tidehunter
+  - vengefulspirit
+  - weaver
+
+"Attack Damage Reduction":
+  - axe
+  - bane
+  - dragon_knight
+  - lycan
+  - razor
+  - rubick
+  - tidehunter
+
+"BKB Piercers":
+  - ancient_apparition
+  - bane
+  - batrider
+  - beastmaster
+  - doom_bringer
+  - enigma
+  - faceless_void
+  - legion_commander
+  - magnataur
+  - phoenix
+  - primal_beast
+  - spirit_breaker
+  - warlock
+  - winter_wyvern
+
+"Infinite Scaling":
+  - axe
+  - legion_commander
+  - necrolyte
+  - pudge
+  - silencer
+  - slark
+  - storm_spirit
+
+"Manila Zoo":
+  - beastmaster
+  - broodmother
+  - chen
+  - enigma
+  - lone_druid
+  - lycan
+  - meepo
+  - enchantress
+  - venomancer
+  - visage
+  - warlock
+
+
+
+############################################################################
+# TI Nostalgia
+############################################################################
+"Alliance TI 3":
+  - alchemist
+  - batrider
+  - crystal_maiden
+  - furion
+  - lone_druid
+  - puck
+  - wisp
+
+"OG TI 8 Finals":
+  - ember_spirit
+  - furion
+  - magnataur
+  - rubick
+  - zuus
+
+"TI 9":
+  - gyrocopter
+  - meepo
+  - templar_assassin
+  - tidehunter
+  - wisp
+
+"TI 10":
+  - invoker
+  - lycan
+  - magnataur
+  - tiny
+
+
+
+############################################################################
+# Elemental theme
+############################################################################
+"Earth Team":
+  - brewmaster
+  - earthshaker
+  - earth_spirit
+  - elder_titan
+  - leshrac
+  - meepo
+  - nyx_assassin
+  - primal_beast
+  - sand_king
+  - tiny
+  - ursa
+
+"Fire Team":
+  - clinkz
+  - doom_bringer
+  - dragon_knight
+  - ember_spirit
+  - huskar
+  - lina
+  - batrider
+  - phoenix
+  - warlock
+
+"Water Team":
+  - ancient_apparition
+  - crystal_maiden
+  - jakiro
+  - morphling
+  - naga_siren
+  - slardar
+  - slark
+  - tidehunter
+  - winter_wyvern
+
+"Lightning Team":
+  - arc_warden
+  - leshrac
+  - razor
+  - rubick
+  - storm_spirit
+  - zuus
+
+"Nature Team":
+  - beastmaster
+  - enchantress
+  - furion
+  - hoodwink
+  - tiny
+  - treant
+  - windrunner
+
+
+
+############################################################################
+# Lore Theme
+############################################################################
+"Demons":
+  - doom_bringer
+  - lion
+  - queenofpain
+  - shadow_demon
+  - nevermore
+  - warlock
+
+"Spirits":
+  - earth_spirit
+  - ember_spirit
+  - spirit_breaker
+  - storm_spirit
+  - vengefulspirit
+  - void_spirit
+
+
+
+############################################################################
+# Meme
+############################################################################
+"Jolenta Heroes":
+  - arc_warden
+  - chaos_knight
+  - spectre
+
+"Jez Heroes":
+  - slardar
+  - sven
+
+
+
+############################################################################
+# Misc
+############################################################################
+"Flying Team":
+  - batrider
+  - dark_willow
+  - gyrocopter
+  - jakiro
+  - lina
+  - night_stalker
+  - phoenix
+  - puck
+  - skywrath_mage
+  - viper
+  - visage
+  - winter_wyvern
+
+
+

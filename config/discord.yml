@@ -1,0 +1,8 @@
+default: &default
+  public_key: 28a91e705045da7cfd169c8b198c1d4ca4ef3878b8ffe9a138eee138e99b0f39
+
+development:
+  <<: *default
+
+production:
+  <<: *default
