@@ -1,4 +1,4 @@
-# README
+# Discord Dota Randomizer
 
 Discord bot for randomizing Dota 2 roles/heroes/teams.
 

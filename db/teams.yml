@@ -15,9 +15,12 @@
   - pugna
   - rubick
   - tidehunter
+  - treant
   - abyssal_underlord
+  - undying
   - venomancer
   - viper
+  - skeleton_king
   - windrunner
 
 "Blue Team":
@@ -56,6 +59,18 @@
   - nevermore
   - troll_warlord
   - warlock
+
+"Purple Team":
+  - bane
+  - broodmother
+  - dark_seer
+  - dazzle
+  - enigma
+  - faceless_void
+  - night_stalker
+  - templar_assassin
+  - void_spirit
+  - witch_doctor
 
 
 
@@ -99,17 +114,58 @@
   - warlock
   - winter_wyvern
 
+"Global Team":
+  - ancient_apparition
+  - dawnbreaker
+  - wisp
+  - keeper_of_the_light
+  - furion
+  - luna
+  - spectre
+  - silencer
+  - spirit_breaker
+  - tinker
+  - abyssal_underlord
+  - zuus
+
+"Illusion Team":
+  - dark_seer
+  - grimstroke
+  - hoodwink
+  - naga_siren
+  - phantom_lancer
+  - ringmaster
+  - shadow_demon
+  - spectre
+  - terrorblade
+
 "Infinite Scaling":
   - axe
   - legion_commander
+  - life_stealer
   - necrolyte
   - pudge
   - silencer
   - slark
   - storm_spirit
 
-"Manila Zoo":
+"Invisible":
+  - bounty_hunter
+  - clinkz
+  - kez
+  - mirana
+  - nyx_assassin
+  - phantom_lancer
+  - riki
+  - sandking
+  - treant
+  - weaver
+  - windrunner
+
+"Micro Heroes":
+  - arc_warden
   - beastmaster
+  - brewmaster
   - broodmother
   - chen
   - enigma
@@ -120,6 +176,25 @@
   - venomancer
   - visage
   - warlock
+
+"Silencer":
+  - bloodseeker
+  - death_prophet
+  - doom_bringer
+  - drow_ranger
+  - earth_spirit
+  - grimstroke
+  - huskar
+  - kez
+  - muerta
+  - night_stalker
+  - puck
+  - queenofpain
+  - riki
+  - skywrath_mage
+  - templar_assassin
+  - void_spirit
+  - silencer
 
 
 
@@ -188,6 +263,7 @@
   - ancient_apparition
   - crystal_maiden
   - jakiro
+  - kunkka
   - morphling
   - naga_siren
   - slardar
@@ -225,6 +301,22 @@
   - nevermore
   - warlock
 
+"Keen":
+  - rattletrap
+  - tinker
+  - sniper
+  - gyrocopter
+  - techies
+  - shredder
+  - alchemist
+  - snapfire
+
+"Oglodi":
+  - axe
+  - disruptor
+  - life_stealer
+  - warlock
+
 "Spirits":
   - earth_spirit
   - ember_spirit
@@ -247,6 +339,9 @@
   - slardar
   - sven
 
+"Kasalanan ni Omni":
+  - omniknight
+
 
 
 ############################################################################
@@ -265,6 +360,90 @@
   - viper
   - visage
   - winter_wyvern
+
+"Heroes Added Since Icefrog Left":
+  - dawnbreaker
+  - marci
+  - primal_beast
+  - muerta
+  - ringmaster
+  - kez
+
+"Hero complexity == 3":
+  - arc_warden
+  - brewmaster
+  - chen
+  - earth_spirit
+  - invoker
+  - wisp
+  - kez
+  - lone_druid
+  - meepo
+  - morphling
+  - oracle
+  - rubick
+  - visage
+
+"Matryoshka Doll":
+  - centaur
+  - life_stealer
+  - phoenix
+  - pudge
+  - snapfire
+  - undying
+
+"New Player Heroes":
+  - bristleback
+  - chaos_knight
+  - crystal_maiden
+  - dragon_knight
+  - drow_ranger
+  - ogre_magi
+  - skeleton_king
+  - sniper
+  - tidehunter
+  - viper
+
+"Requires Multiple Hits":
+  - clinkz
+  - rattletrap
+  - grimstroke
+  - gyrocopter
+  - juggernaut
+  - keeper_of_the_light
+  - lich
+  - phoenix
+  - pugna
+  - shadow_shaman
+  - templar_assassin
+  - undying
+  - venomancer
+  - zuus
+  - weaver
+
+"Top 10 Most Played Heroes 2025":
+  - pudge
+  - lion
+  - sniper
+  - witch_doctor
+  - invoker
+  - axe
+  - earthshaker
+  - rubick
+  - legion_commander
+  - juggernaut
+
+"Top 10 Most Unplayed Heroes 2025":
+  - chen
+  - brewmaster
+  - naga_siren
+  - elder_titan
+  - lone_druid
+  - visage
+  - meepo
+  - batrider
+  - lycan
+  - dark_seer
 
 
 
