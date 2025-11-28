@@ -23,10 +23,10 @@ class Randomizer
       get_random_hero
     when :team
       team = Team.all.sample
-      get_random_team(heroes: team.heroes, team_name: team.name)
+      get_random_team(heroes: team.heroes.order(localized_name: :asc), team_name: team.name)
     when :all_random
       get_random_team(
-        heroes: Hero.all.sample(5),
+        heroes: Hero.all.sample(5).sort_by(&:localized_name),
         team_name: 'Random Teamangs'
       )
     end
@@ -92,7 +92,7 @@ class Randomizer
         {
           "title": "Kayo ay maglalaro ng \"#{team_name}\"",
           "color": 11670158,
-          "description": heroes.order(localized_name: :asc).pluck(:localized_name).join("\n"),
+          "description": heroes.pluck(:localized_name).join("\n"),
           "url": 'https://dota2.com',
           "author": {
             "name": 'Team Randomizer'
