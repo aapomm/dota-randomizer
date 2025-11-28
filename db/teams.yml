@@ -82,7 +82,9 @@
   - bristleback
   - dragon_knight
   - pangolier
+  - naga_siren
   - nevermore
+  - slardar
   - snapfire
   - templar_assassin
   - tidehunter
@@ -127,6 +129,22 @@
   - tinker
   - abyssal_underlord
   - zuus
+
+"Healers":
+  - chen
+  - dawnbreaker
+  - dazzle
+  - enchantress
+  - wisp
+  - keeper_of_the_light
+  - necrolyte
+  - omniknight
+  - oracle
+  - pugna
+  - treant
+  - undying
+  - winter_wyvern
+  - witch_doctor
 
 "Illusion Team":
   - dark_seer
@@ -176,6 +194,47 @@
   - venomancer
   - visage
   - warlock
+
+"Miss Chance":
+  - arc_warden
+  - brewmaster
+  - broodmother
+  - clinkz
+  - keeper_of_the_light
+  - hoodwink
+  - mirana
+  - phoenix
+  - phantom_assassin
+  - sand_king
+  - tinker
+  - troll_warlord
+  - riki
+  - windrunner
+
+"Pure Damage":
+  - bane
+  - bloodseeker
+  - enchantress
+  - enigma
+  - invoker
+  - omniknight
+  - queenofpain
+  - tinker
+  - witch_doctor
+
+"Savers":
+  - centaur
+  - dazzle
+  - wisp
+  - marci
+  - oracle
+  - phoenix
+  - pudge
+  - ringmaster
+  - shadow_demon
+  - snapfire
+  - undying
+  - winter_wyvern
 
 "Silencer":
   - bloodseeker
@@ -341,6 +400,18 @@
 
 "Kasalanan ni Omni":
   - omniknight
+
+"Toxic Pub Heroes":
+  - antimage
+  - invoker
+  - furion
+  - monkey_king
+  - obsidian_destroyer
+  - phantom_lancer
+  - phantom_assassin
+  - pudge
+  - nevermore
+  - sniper
 
 
 
