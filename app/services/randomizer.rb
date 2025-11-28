@@ -75,8 +75,10 @@ class Randomizer
   end
 
   def get_random_team(heroes:, team_name:)
+    heroes_for_images = heroes.sample(4)
+
     embed_images =
-      heroes[1..-1].map do |hero|
+      heroes_for_images[1..3].map do |hero|
         {
           "url": 'https://dota2.com',
           "image": {
@@ -90,13 +92,13 @@ class Randomizer
         {
           "title": "Kayo ay maglalaro ng \"#{team_name}\"",
           "color": 11670158,
-          "description": heroes.pluck(:localized_name).join("\n"),
+          "description": heroes.order(localized_name: :asc).pluck(:localized_name).join("\n"),
           "url": 'https://dota2.com',
           "author": {
             "name": 'Team Randomizer'
           },
           "image": {
-            "url": heroes.first.image_link
+            "url": heroes_for_images.first.image_link
           }
         }
       ] + embed_images,
