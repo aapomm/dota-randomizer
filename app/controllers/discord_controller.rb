@@ -34,7 +34,6 @@ class DiscordController < ApplicationController
 
     unless verifier.valid?(signature, timestamp, body)
       head 401
-      return
     end
   end
 end

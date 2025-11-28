@@ -43,7 +43,7 @@ class Randomizer
           "title": "Ikaw ay maglalaro ng #{role[:role_name]}",
           "color": 16711680,
           "author": {
-            "name": "Role Randomizer"
+            "name": 'Role Randomizer'
           },
           "image": {
             "url": role[:img_link]
@@ -63,7 +63,7 @@ class Randomizer
           "title": "Ikaw ay maglalaro ng #{hero.localized_name}",
           "color": 2687231,
           "author": {
-            "name": "Hero Randomizer"
+            "name": 'Hero Randomizer'
           },
           "image": {
             "url": hero.image_link
@@ -78,7 +78,7 @@ class Randomizer
     embed_images =
       heroes[1..-1].map do |hero|
         {
-          "url": "https://dota2.com",
+          "url": 'https://dota2.com',
           "image": {
             "url": hero.image_link
           }
@@ -91,9 +91,9 @@ class Randomizer
           "title": "Kayo ay maglalaro ng \"#{team_name}\"",
           "color": 11670158,
           "description": heroes.pluck(:localized_name).join("\n"),
-          "url": "https://dota2.com",
+          "url": 'https://dota2.com',
           "author": {
-            "name": "Team Randomizer"
+            "name": 'Team Randomizer'
           },
           "image": {
             "url": heroes.first.image_link
