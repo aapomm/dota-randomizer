@@ -147,12 +147,12 @@
   - witch_doctor
 
 "Illusion Team":
+  - chaos_knight
   - dark_seer
   - grimstroke
   - hoodwink
   - naga_siren
   - phantom_lancer
-  - ringmaster
   - shadow_demon
   - spectre
   - terrorblade
@@ -268,6 +268,31 @@
   - lone_druid
   - puck
   - wisp
+
+"EG TI 5":
+  - ancient_apparition
+  - crystal_maiden
+  - earthshaker
+  - ember_spirit
+  - gyrocopter
+  - rattletrap
+  - naga_siren
+  - storm_spirit
+  - skywrath_mage
+  - undying
+  - windrunner
+  - winter_wyvern
+
+"TNC vs OG TI 6":
+  - axe
+  - dazzle
+  - drow_ranger
+  - elder_titan
+  - life_stealer
+  - vengefulspirit
+  - phantom_lancer
+  - huskar
+  - faceless_void
 
 "OG TI 8 Finals":
   - ember_spirit
@@ -393,6 +418,7 @@
   - arc_warden
   - chaos_knight
   - spectre
+  - windrunner
 
 "Jez Heroes":
   - slardar
@@ -504,7 +530,7 @@
   - legion_commander
   - juggernaut
 
-"Top 10 Most Unplayed Heroes 2025":
+"Top 10 Least Played Heroes 2025":
   - chen
   - brewmaster
   - naga_siren
