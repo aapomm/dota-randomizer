@@ -1,4 +1,6 @@
 class Randomizer
+  include Sender
+
   # Roles image source: https://imgur.com/a/J483B6x
   ROLES = [
     { role_name: 'Carry', img_link: 'https://i.imgur.com/rL1ZwZ4.png' },
@@ -18,9 +20,11 @@ class Randomizer
   def randomize
     case randomizer_type
     when :role
-      send_random_role
+      role = ROLES[rand(0..4)]
+      send_random_role(role)
     when :hero
-      send_random_hero
+      hero = get_random_hero
+      send_random_hero(hero)
     when :team
       team = get_randomized_team
       send_random_team(heroes: team.heroes.order(localized_name: :asc), team_name: team.name)
@@ -34,77 +38,6 @@ class Randomizer
 
   private
 
-  def send_random_role
-    role = ROLES[rand(0..4)]
-
-    {
-      "embeds": [
-        {
-          "title": "Ikaw ay maglalaro ng #{role[:role_name]}",
-          "color": 16711680,
-          "author": {
-            "name": 'Role Randomizer'
-          },
-          "image": {
-            "url": role[:img_link]
-          }
-        }
-      ],
-      "attachments": []
-    }
-  end
-
-  def send_random_hero
-    hero = get_random_hero
-
-    {
-      "embeds": [
-        {
-          "title": "Ikaw ay maglalaro ng #{hero.localized_name}",
-          "color": 2687231,
-          "author": {
-            "name": 'Hero Randomizer'
-          },
-          "image": {
-            "url": hero.image_link
-          }
-        }
-      ],
-      "attachments": []
-    }
-  end
-
-  def send_random_team(heroes:, team_name:)
-    heroes_for_images = heroes.sample(4)
-
-    embed_images =
-      heroes_for_images[1..3].map do |hero|
-        {
-          "url": 'https://dota2.com',
-          "image": {
-            "url": hero.image_link
-          }
-        }
-      end
-
-    {
-      "embeds": [
-        {
-          "title": "Kayo ay maglalaro ng \"#{team_name}\"",
-          "color": 11670158,
-          "description": heroes.pluck(:localized_name).join("\n"),
-          "url": 'https://dota2.com',
-          "author": {
-            "name": 'Team Randomizer'
-          },
-          "image": {
-            "url": heroes_for_images.first.image_link
-          }
-        }
-      ] + embed_images,
-      "attachments": []
-    }
-  end
 
   def randomizer_type
     data['options'].first['name'].to_sym
@@ -132,9 +65,17 @@ class Randomizer
     if randomizer_options.any?
       attribute = randomizer_options.find { |o| o['name'] == 'attribute' }&.fetch('value')
       complexity = randomizer_options.find { |o| o['name'] == 'complexity' }&.fetch('value')
+      team_name = randomizer_options.find { |o| o['name'] == 'team' }&.fetch('value')
 
       heroes = heroes.where(primary_attr: attribute) if Hero.primary_attrs.key?(attribute)
       heroes = heroes.where(complexity: complexity) if ['1', '2', '3'].include?(complexity)
+
+      team = Team.where('lower(name) = ?', team_name.downcase).first
+      if team
+        heroes = heroes.joins(:team_heroes).where({
+          team_heroes: { team: team }
+        })
+      end
     end
 
     if heroes.any?

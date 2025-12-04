@@ -64,6 +64,11 @@ def register_command
                       "value": "3"
                     }
                   ]
+                },
+                {
+                  "name": "team",
+                  "description": "Get a specific hero from a chosen Team",
+                  "type": 3
                 }
               ]
           },

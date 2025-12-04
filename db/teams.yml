@@ -452,21 +452,6 @@ misc:
     - ringmaster
     - kez
 
-  "Hero complexity == 3":
-    - arc_warden
-    - brewmaster
-    - chen
-    - earth_spirit
-    - invoker
-    - wisp
-    - kez
-    - lone_druid
-    - meepo
-    - morphling
-    - oracle
-    - rubick
-    - visage
-
   "Matryoshka Doll":
     - centaur
     - life_stealer
