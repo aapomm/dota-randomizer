@@ -68,7 +68,7 @@ class Randomizer
       team_name = randomizer_options.find { |o| o['name'] == 'team' }&.fetch('value')
 
       heroes = heroes.where(primary_attr: attribute) if Hero.primary_attrs.key?(attribute)
-      heroes = heroes.where(complexity: complexity) if ['1', '2', '3'].include?(complexity)
+      heroes = heroes.where(complexity: complexity) if [ '1', '2', '3' ].include?(complexity)
 
       team = Team.where('lower(name) = ?', team_name.downcase).first
       if team
