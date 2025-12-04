@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'faraday'
-require 'json'
-
 app_id = ARGV[0]
 @token = ARGV[1]
 @url = "https://discord.com/api/v10/applications/#{app_id}"
@@ -27,7 +24,7 @@ def register_command
                   "name": "attribute",
                   "description": "Get a specific hero with the attribute",
                   "type": 3,
-                  choices: [
+                  "choices": [
                     {
                       "name": "Strength",
                       "value": "strength"
@@ -50,7 +47,7 @@ def register_command
                   "name": "complexity",
                   "description": "Get a specific hero with the complexity",
                   "type": 3,
-                  choices: [
+                  "choices": [
                     {
                       "name": "1",
                       "value": "1"
@@ -68,7 +65,8 @@ def register_command
                 {
                   "name": "team",
                   "description": "Get a specific hero from a chosen Team",
-                  "type": 3
+                  "type": 3,
+                  "choices": Team.first(25).pluck(:name).map { |t| { name: t, value: t } }
                 }
               ]
           },
@@ -81,37 +79,14 @@ def register_command
                   "name": "category",
                   "description": "Get a specific team from the category",
                   "type": 3,
-                  "choices": [
-                    {
-                      "name": "Color",
-                      "value": "color"
-                    },
-                    {
-                      "name": "Strategy",
-                      "value": "strategy"
-                    },
-                    {
-                      "name": "Ti",
-                      "value": "ti"
-                    },
-                    {
-                      "name": "Elemental",
-                      "value": "elemental"
-                    },
-                    {
-                      "name": "Lore",
-                      "value": "lore"
-                    },
-                    {
-                      "name": "Meme",
-                      "value": "meme"
-                    },
-                    {
-                      "name": "Misc",
-                      "value": "misc"
-                    }
-                  ]
+                  "choices": Team.categories.keys.map { |c| { name: c.capitalize, value: c } }
                 },
+                {
+                  "name": "team",
+                  "description": "Get a specific team",
+                  "type": 3,
+                  "choices": Team.first(25).pluck(:name).map { |t| { name: t, value: t } }
+                }
               ]
           },
           {

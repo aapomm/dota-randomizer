@@ -18,21 +18,35 @@ module Sender
   end
 
   def send_random_hero(hero)
-    {
-      "embeds": [
-        {
-          "title": "Ikaw ay maglalaro ng #{hero.localized_name}",
-          "color": 2687231,
-          "author": {
-            "name": 'Hero Randomizer'
-          },
-          "image": {
-            "url": hero.image_link
+    if hero
+      {
+        "embeds": [
+          {
+            "title": "Ikaw ay maglalaro ng #{hero.localized_name}",
+            "color": 2687231,
+            "author": {
+              "name": 'Hero Randomizer'
+            },
+            "image": {
+              "url": hero.image_link
+            }
           }
-        }
-      ],
-      "attachments": []
-    }
+        ],
+        "attachments": []
+      }
+    else
+      {
+        "embeds": [
+          {
+            "title": 'Walang bayaning tumutugma sa iyong pamantayan',
+            "color": 2687231,
+            "author": {
+              "name": 'Hero Randomizer'
+            }
+          }
+        ]
+      }
+    end
   end
 
   def send_random_team(heroes:, team_name:)

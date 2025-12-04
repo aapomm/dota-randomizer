@@ -444,7 +444,7 @@ misc:
     - visage
     - winter_wyvern
 
-  "Heroes Added Since Icefrog Left":
+  "Icefrog Left":
     - dawnbreaker
     - marci
     - primal_beast
@@ -489,7 +489,7 @@ misc:
     - zuus
     - weaver
 
-  "Top 10 Most Played Heroes 2025":
+  "2025 Most Played":
     - pudge
     - lion
     - sniper
@@ -501,7 +501,7 @@ misc:
     - legion_commander
     - juggernaut
 
-  "Top 10 Least Played Heroes 2025":
+  "2025 Least Played":
     - chen
     - brewmaster
     - naga_siren

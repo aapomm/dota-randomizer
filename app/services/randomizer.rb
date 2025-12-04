@@ -49,8 +49,14 @@ class Randomizer
 
   def get_randomized_team
     if randomizer_options.any?
-      category = randomizer_options.find { |o| o['name'] == 'category' }['value']
+      team_name = randomizer_options.find { |o| o['name'] == 'team' }&.fetch('value')
+      if team_name
+        team = Team.where('lower(name) = ?', team_name.downcase).first
 
+        return team if team
+      end
+
+      category = randomizer_options.find { |o| o['name'] == 'category' }['value']
       if Team.categories.key?(category)
         return Team.where(category: category).sample
       end
@@ -70,18 +76,14 @@ class Randomizer
       heroes = heroes.where(primary_attr: attribute) if Hero.primary_attrs.key?(attribute)
       heroes = heroes.where(complexity: complexity) if [ '1', '2', '3' ].include?(complexity)
 
-      team = Team.where('lower(name) = ?', team_name.downcase).first
-      if team
+      if team_name
+        team = Team.where('lower(name) = ?', team_name.downcase).first
         heroes = heroes.joins(:team_heroes).where({
           team_heroes: { team: team }
         })
       end
     end
 
-    if heroes.any?
-      heroes.sample
-    else
-      Hero.all.sample
-    end
+    heroes.sample
   end
 end
