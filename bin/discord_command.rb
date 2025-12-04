@@ -14,28 +14,105 @@ def register_command
       "description": "Get a random hero/role/team",
       "options": [
           {
-              "name": "type",
-              "description": "Type to randomize",
-              "type": 3,
-              "required": true,
-              "choices": [
-                  {
-                      "name": "Hero",
-                      "value": "hero"
-                  },
-                  {
-                      "name": "Role",
-                      "value": "role"
-                  },
-                  {
-                      "name": "Team",
-                      "value": "team"
-                  },
-                  {
-                      "name": "All random",
-                      "value": "all_random"
-                  }
+              "name": "role",
+              "description": "Get a random Role (1-5)",
+              "type": 1
+          },
+          {
+              "name": "hero",
+              "description": "Get a random Hero",
+              "type": 1,
+              "options": [
+                {
+                  "name": "attribute",
+                  "description": "Get a specific hero with the attribute",
+                  "type": 3,
+                  choices: [
+                    {
+                      "name": "Strength",
+                      "value": "strength"
+                    },
+                    {
+                      "name": "Agility",
+                      "value": "agility"
+                    },
+                    {
+                      "name": "Intelligence",
+                      "value": "intelligence"
+                    },
+                    {
+                      "name": "Universal",
+                      "value": "universal"
+                    }
+                  ]
+                },
+                {
+                  "name": "complexity",
+                  "description": "Get a specific hero with the complexity",
+                  "type": 3,
+                  choices: [
+                    {
+                      "name": "1",
+                      "value": "1"
+                    },
+                    {
+                      "name": "2",
+                      "value": "2"
+                    },
+                    {
+                      "name": "3",
+                      "value": "3"
+                    }
+                  ]
+                }
               ]
+          },
+          {
+              "name": "team",
+              "description": "Get a random Team",
+              "type": 1,
+              "options": [
+                {
+                  "name": "category",
+                  "description": "Get a specific team from the category",
+                  "type": 3,
+                  "choices": [
+                    {
+                      "name": "Color",
+                      "value": "color"
+                    },
+                    {
+                      "name": "Strategy",
+                      "value": "strategy"
+                    },
+                    {
+                      "name": "Ti",
+                      "value": "ti"
+                    },
+                    {
+                      "name": "Elemental",
+                      "value": "elemental"
+                    },
+                    {
+                      "name": "Lore",
+                      "value": "lore"
+                    },
+                    {
+                      "name": "Meme",
+                      "value": "meme"
+                    },
+                    {
+                      "name": "Misc",
+                      "value": "misc"
+                    }
+                  ]
+                },
+              ]
+          },
+          {
+              "name": "all_random",
+              "description": "Get 5 All Random Heroes",
+              "type": 1
           }
       ]
   }

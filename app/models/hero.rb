@@ -5,4 +5,6 @@ class Hero < ApplicationRecord
   validates :name, presence: true
   validates :localized_name, presence: true
   validates :image_link, presence: true
+
+  enum :primary_attr, [:strength, :agility, :intelligence, :universal]
 end

@@ -15,17 +15,22 @@ data.each do |hero|
   Hero.create(
     name: hero['name'],
     localized_name: hero['localized_name'],
+    primary_attr: hero['primary_attr'],
+    complexity: hero['complexity'],
     image_link: "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/#{hero['name']}.png"
   )
 end
 
 data = YAML.load_file(Rails.root.join('db', 'teams.yml'))
-data.each do |name, members|
-  puts "Creating team: #{name}"
-  team = Team.create(name: name)
 
-  members.each do |hero_name|
-    puts "Adding hero to team: #{hero_name}"
-    TeamHero.create(team: team, hero: Hero.find_by_name!(hero_name))
+Team.categories.keys.each do |category|
+  data[category].each do |name, members|
+    puts "Creating team: #{name}"
+    team = Team.create(category: Team.categories[category], name: name)
+
+    members.each do |hero_name|
+      puts "Adding hero to team: #{hero_name}"
+      TeamHero.create(team: team, hero: Hero.find_by_name!(hero_name))
+    end
   end
 end

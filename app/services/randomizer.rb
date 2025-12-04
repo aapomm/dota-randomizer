@@ -16,16 +16,16 @@ class Randomizer
 
   # Returns a hash
   def randomize
-    case random_type
+    case randomizer_type
     when :role
-      get_random_role
+      send_random_role
     when :hero
-      get_random_hero
+      send_random_hero
     when :team
-      team = Team.all.sample
-      get_random_team(heroes: team.heroes.order(localized_name: :asc), team_name: team.name)
+      team = get_randomized_team
+      send_random_team(heroes: team.heroes.order(localized_name: :asc), team_name: team.name)
     when :all_random
-      get_random_team(
+      send_random_team(
         heroes: Hero.all.sample(5).sort_by(&:localized_name),
         team_name: 'Random Teamangs'
       )
@@ -34,7 +34,7 @@ class Randomizer
 
   private
 
-  def get_random_role
+  def send_random_role
     role = ROLES[rand(0..4)]
 
     {
@@ -54,8 +54,8 @@ class Randomizer
     }
   end
 
-  def get_random_hero
-    hero = Hero.all.sample
+  def send_random_hero
+    hero = get_random_hero
 
     {
       "embeds": [
@@ -74,7 +74,7 @@ class Randomizer
     }
   end
 
-  def get_random_team(heroes:, team_name:)
+  def send_random_team(heroes:, team_name:)
     heroes_for_images = heroes.sample(4)
 
     embed_images =
@@ -106,7 +106,41 @@ class Randomizer
     }
   end
 
-  def random_type
-    data['options'].first['value'].to_sym
+  def randomizer_type
+    data['options'].first['name'].to_sym
+  end
+
+  def randomizer_options
+    data['options'].first['options']
+  end
+
+  def get_randomized_team
+    if randomizer_options.any?
+      category = randomizer_options.find { |o| o['name'] == 'category' }['value']
+
+      if Team.categories.key?(category)
+        return Team.where(category: category).sample
+      end
+    end
+
+    Team.all.sample
+  end
+
+  def get_random_hero
+    heroes = Hero.all
+
+    if randomizer_options.any?
+      attribute = randomizer_options.find { |o| o['name'] == 'attribute' }&.fetch('value')
+      complexity = randomizer_options.find { |o| o['name'] == 'complexity' }&.fetch('value')
+
+      heroes = heroes.where(primary_attr: attribute) if Hero.primary_attrs.key?(attribute)
+      heroes = heroes.where(complexity: complexity) if ['1', '2', '3'].include?(complexity)
+    end
+
+    if heroes.any?
+      heroes.sample
+    else
+      Hero.all.sample
+    end
   end
 end
