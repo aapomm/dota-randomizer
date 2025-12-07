@@ -251,9 +251,17 @@ strategy:
     - void_spirit
     - silencer
 
+  "Suicide Squad":
+    - lich
+    - nevermore
+    - skeleton_king
+    - undying
+    - vengefulspirit
+    - warlock
 
 
-ti: 
+
+ti:
   "Alliance TI 3":
     - alchemist
     - batrider
