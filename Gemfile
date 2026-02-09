@@ -38,7 +38,7 @@ gem 'thruster', require: false
 
 gem 'ed25519'
 
-gem 'faraday', '~> 2.14.0'
+gem 'faraday', '~> 2.14.1'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
